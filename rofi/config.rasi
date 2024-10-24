@@ -1,0 +1,79 @@
+configuration {
+    modes: [ window, drun, run, filebrowser, ssh ];
+    font: "Noto Sans 12";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+* {
+    bg: #1a1b26;
+    bg-alt: #292e42;
+    fg: #a9b1d6;
+    fg-alt: #c0caf5;
+    
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    background-color: @bg;
+}
+
+element {
+    padding: 8 0;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+element selected {
+    text-color: @fg-alt;
+    background-color: @bg-alt;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 30;
+    padding: 0 10 0 0;
+    background-color: transparent;
+}
+
+entry {
+    padding: 12;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg;
+}
+
+listview {
+    background-color: @bg;
+    columns: 1;
+    lines: 8;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: @bg;
+}
+
+prompt {
+    enabled: true;
+    padding: 12 0 0 12;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
