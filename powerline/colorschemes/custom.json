@@ -1,0 +1,43 @@
+{
+	"name": "Custom Pastel",
+	"groups": {
+		"information:additional":     { "fg": "gray9", "bg": "gray4", "attrs": [] },
+		"information:regular":        { "fg": "gray10", "bg": "gray4", "attrs": ["bold"] },
+		"information:highlighted":    { "fg": "white", "bg": "gray4", "attrs": [] },
+		"information:priority":       { "fg": "brightyellow", "bg": "mediumorange", "attrs": [] },
+		"warning:regular":            { "fg": "white", "bg": "brightred", "attrs": ["bold"] },
+		"critical:failure":           { "fg": "white", "bg": "darkestred", "attrs": [] },
+		"critical:success":           { "fg": "white", "bg": "darkestgreen", "attrs": [] },
+		"background":                 { "fg": "white", "bg": "gray0", "attrs": [] },
+		"background:divider":         { "fg": "gray5", "bg": "gray0", "attrs": [] },
+		"user":                       { "fg": "gray10", "bg": "lavender", "attrs": ["bold"] },
+		"virtualenv":                 { "fg": "white", "bg": "darkcyan", "attrs": [] },
+		"branch":                     { "fg": "gray9", "bg": "gray4", "attrs": [] },
+		"branch_dirty":               { "fg": "brightyellow", "bg": "gray4", "attrs": [] },
+		"branch_clean":               { "fg": "gray9", "bg": "gray4", "attrs": [] },
+		"cwd":                        { "fg": "gray10", "bg": "gray4", "attrs": [] },
+		"cwd:current_folder":         { "fg": "gray11", "bg": "gray5", "attrs": ["bold"] },
+		"cwd:divider":                { "fg": "gray7", "bg": "gray4", "attrs": [] },
+		"hostname":                   { "fg": "gray10", "bg": "lightskyblue", "attrs": [] },
+		"exit_fail":                  { "fg": "white", "bg": "darkestred", "attrs": [] },
+		"exit_success":               { "fg": "white", "bg": "darkestgreen", "attrs": [] },
+		"environment":                { "fg": "white", "bg": "darkestgreen", "attrs": [] },
+		"mode":                       { "fg": "darkestgreen", "bg": "brightgreen", "attrs": ["bold"] }
+	},
+	"colors": {
+		"lavender": [183, "d7afff"],
+		"lightskyblue": [153, "afd7ff"],
+		"gray0": [235, "262626"],
+		"gray1": [238, "444444"],
+		"gray2": [240, "585858"],
+		"gray3": [241, "626262"],
+		"gray4": [243, "767676"],
+		"gray5": [244, "808080"],
+		"gray6": [245, "8a8a8a"],
+		"gray7": [246, "949494"],
+		"gray8": [247, "9e9e9e"],
+		"gray9": [248, "a8a8a8"],
+		"gray10": [250, "bcbcbc"],
+		"gray11": [252, "d0d0d0"]
+	}
+}
