@@ -1,31 +1,32 @@
+set -g fish_greeting
+
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    # Initialize starship prompt
     starship init fish | source
-
-    # Set default editor
-    set -gx EDITOR nvim
-    set -gx VISUAL nvim
-
-    # System aliases
-    alias sysupdate='sudo pacman -Syu' # Update System
-    alias conf='cd ~/.config'
-
-    # Remove greeting message
-    set -g fish_greeting
-
-    # Useful functions
-    # Create directory and cd into it
-    function mkcd
-        mkdir -p $argv[1] && cd $argv[1]
-    end
-
-    # Git clone and cd into directory
-    function gclone
-        git clone $argv[1] && cd (basename $argv[1] .git)
-    end
-
-    # Quick cd up directories
-    alias ..='cd ..'
-    alias ...='cd ../..'
 end
+
+# List Directory
+alias l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias lt='eza --icons=auto --tree' # list folder as tree
+
+# Handy change dir shortcuts
+abbr .. 'cd ..'
+abbr ... 'cd ../..'
+abbr .3 'cd ../../..'
+abbr .4 'cd ../../../..'
+abbr .5 'cd ../../../../..'
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+abbr mkdir 'mkdir -p'
+
+alias nvim='bash ~/.config/kitty/kitty.sh'
+
+zoxide init fish | source
+
+# QOL pacman scripts
+alias install='sudo pacman -S'
+alias sysupdate='sudo pacman -Syu'
+alias search='sudo pacman -Ss'
+alias conf='cd .config'

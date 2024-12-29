@@ -1,0 +1,4 @@
+theme = zenbones
+title = " "
+gtk-titlebar = false
+padding = 0
