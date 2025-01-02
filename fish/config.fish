@@ -2,6 +2,13 @@ set -g fish_greeting
 
 if status is-interactive
     starship init fish | source
+
+    # Set default terminal
+    # set -x TERMINAL ghostty
+    # set -x TERMINAL kitty
+
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
 end
 
 # List Directory
